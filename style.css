@@ -1,0 +1,96 @@
+/* CSS files add styling rules to your content */
+
+html {
+  padding: 0;
+}
+
+body {
+  background: #EBF6FF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 5rem 5vw 2rem;
+}
+
+h1 {
+  color: #0E1E25;
+  text-align: center;
+}
+
+.useless-button {
+  background: #0088FF;
+  color: #FFFFFF;
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
+
+p {
+  text-align: center;
+}
+
+
+
+/*
+ * -----------------------------------------------------------------------------
+ * Don’t edit or delete below this line unless you’re removing the banner.
+ * -----------------------------------------------------------------------------
+ */
+.useless-web-banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+
+.useless-web-link {
+  display: block;
+  margin: 0;
+  padding: 0 0 10px 10px;
+}
+
+.useless-web-link::before {
+  content: "";
+  position: absolute;
+  right: calc(100% - 4px);
+  top: 24px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border: 3px solid #3D3D3D;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(-45deg);
+  z-index: 3;
+}
+
+.useless-web-link::after {
+  content: attr(data-tooltip);
+
+  position: absolute;
+  right: 100%;
+  top: 10px;
+
+  background: white;
+  border: 3px solid #3D3D3D;
+  border-radius: 8px;
+  color: #0E1E25;
+  font-size: 0.875rem;
+  padding: 10px;
+  text-align: center;
+  width: 220px;
+  z-index: 2;
+}
+
+.useless-web-link::before,
+.useless-web-link::after {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.useless-web-link:hover::before,
+.useless-web-link:hover::after {
+  opacity: 1;
+  pointer-events: all;
+}
